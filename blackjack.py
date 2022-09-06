@@ -10,7 +10,8 @@
 ## Cards are not removed from the deck as they are drawn.
 ## The computer is the dealer.
 
-import random 
+import random
+import os 
 logo = """
 .------.            _     _            _    _            _    
 |A_  _ |.          | |   | |          | |  (_)          | |   
@@ -125,7 +126,8 @@ def blackjack():
         compare(user_score, computer_score)
     start_over = input("Do you want to start another game? Type 'y' or 'n': ")
     # Recursion to start the game over 
-    if start_over == "y": 
+    if start_over == "y":
+        os.system('cls') 
         blackjack()  
     else:
         print("Thank you for playing!")   
